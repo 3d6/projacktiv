@@ -1,0 +1,49 @@
+nav.navbar.yamm.navbar-default
+  .navbar-header
+    a(href="#").navbar-brand ProfiSle
+
+  ul.nav.navbar-nav
+    li.active
+      a(href="#") Home
+
+    li.dropdown.yamm-fw
+      a.dropdown-toggle(data-toggle='dropdown' href='#') Page 3
+        span.caret
+
+      ul.dropdown-menu
+        each val in [1, 2, 4]
+          li
+            a(href='#')=  'Page 1-' + val
+
+    li.dropdown.yamm-fw
+      a.dropdown-toggle(data-toggle='dropdown' href='#') Page 2
+        span.caret
+
+      ul.dropdown-menu
+        li
+          .yamm-content
+            .row
+
+              .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                h4 Important Group 1
+                  .glyphicon.glyphicon-search(aria-hidden="true")
+                hr
+                .row
+                  each val in [1, 2, 3, 4]
+                    .col-xs-12= 'Group Item 1.' + val
+
+              .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                h4 Important Group 2
+                  .glyphicon.glyphicon-star(aria-hidden="true")
+                hr
+                .row
+                  each val in [1, 2, 3]
+                    .col-xs-12= 'Group Item 2.' + val
+
+              .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                h4 Important Group 3
+                  .glyphicon.glyphicon-heart(aria-hidden="true")
+                hr
+                .row
+                  each val in [1, 2, 3, 4]
+                    .col-xs-12= 'Group Item 3.' + val

@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    ProjectFormComponent
   ],
   imports: [
     BrowserModule,
