@@ -1,6 +1,5 @@
 # projacktiv
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+Managing IT freelance project and skill listings (web frontend)
 
 ## Development server
 
