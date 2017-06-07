@@ -4,11 +4,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "pug": "pug src",
+    "start": "pug src --pretty & ng serve",
+    "build": "pug src --pretty & ng build",
+    "test": "ng test --single-run",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "devpug" : "pug src --pretty --watch",
+    "devstart": "ng serve --open",
+    "devtest": "ng test"
   },
   "private": true,
   "dependencies": {

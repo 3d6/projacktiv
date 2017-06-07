@@ -1,7 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-
 import { AppComponent } from './app.component';
+import { MainNavigationComponent } from './navigation/main-navigation/main-navigation.component';
+import {ProjectEditorComponent} from './project/project-editor/project-editor.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -10,7 +11,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MainNavigationComponent,
+        ProjectEditorComponent
       ],
     }).compileComponents();
   }));
