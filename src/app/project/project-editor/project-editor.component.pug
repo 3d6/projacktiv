@@ -1,22 +1,31 @@
 .row
-  .col-xs-12
-    .input-group
-      span.input-group-addon
-        .glyphicon.glyphicon.glyphicon-user
-      input.form-control#projectname(
-        type='text'
-        name='projectname'
-        placeholder='Project Name'
-      )
+  .col-xs-12.col-xs-offset-0.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+    .row
+      .col-xs-12
+        label
+          | {{currentProject.id}}
+    .row
+      .col-xs-12
+        .input-group
+          span.input-group-addon
+            .glyphicon.glyphicon.glyphicon-user
+          input.form-control#projectname(
+            [(ngModel)] = 'currentProject.name'
+            type='text'
+            name='projectname'
+            placeholder='Project Name'
 
-.row
-  .col-xs-12
-    .input-group
-      span.input-group-addon
-        .glyphicon.glyphicon.glyphicon-heart
-      input.form-control#projescription(
-        type='text'
-        name='projescription'
-        placeholder='Project Description'
-      )
+          )
+
+    .row
+      .col-xs-12
+        .input-group
+          span.input-group-addon
+            .glyphicon.glyphicon.glyphicon-heart
+          input.form-control#projescription(
+            [(ngModel)] = 'currentProject.description'
+            type='text'
+            name='projescription'
+            placeholder='Project Description'
+          )
 
