@@ -17,7 +17,8 @@
           span.input-group-addon
             .glyphicon.glyphicon.glyphicon-user
           input.form-control#projectname(
-            [(ngModel)] = 'currentProject.name'
+            [ngModel] = 'currentProject.name'
+            readonly
             type='text'
             name='projectname'
             placeholder='Project Name'
@@ -30,7 +31,8 @@
           span.input-group-addon
             .glyphicon.glyphicon.glyphicon-heart
           input.form-control#projescription(
-            [(ngModel)] = 'currentProject.description'
+            [ngModel] = 'currentProject.description'
+            readonly
             type='text'
             name='projescription'
             placeholder='Project Description'

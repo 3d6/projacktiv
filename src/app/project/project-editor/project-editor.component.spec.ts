@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectEditorComponent } from './project-editor.component';
-import {ProjectService} from '../project.service';
-import {FormsModule} from '@angular/forms';
+import { ProjectService } from '../project.service';
+import { FormsModule } from '@angular/forms';
 
 
 describe('ProjectEditorComponent', () => {

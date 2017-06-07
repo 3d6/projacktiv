@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MainNavigationComponent } from './navigation/main-navigation/main-navigation.component';
 import {ProjectEditorComponent} from './project/project-editor/project-editor.component';
+import {ProjectViewerComponent} from './project/project-viewer/project-viewer.component';
 import {ProjectService} from './project/project.service';
 import {FormsModule} from '@angular/forms';
 
@@ -16,7 +17,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MainNavigationComponent,
-        ProjectEditorComponent
+        ProjectEditorComponent,
+        ProjectViewerComponent
       ],
       providers: [ProjectService]
     }).compileComponents();

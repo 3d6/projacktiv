@@ -7,13 +7,19 @@ nav.navbar.yamm.navbar-default
       a(href="#") Home
 
     li.dropdown.yamm-fw
-      a.dropdown-toggle(data-toggle='dropdown' href='#') Page 3
+      a.dropdown-toggle(data-toggle='dropdown' href='#')
+        | Projec
         span.caret
 
       ul.dropdown-menu
-        each val in [1, 2, 4]
-          li
-            a(href='#')=  'Page 1-' + val
+        li
+          .yamm-content
+            .row
+              .col-lg-3.col-lg-offset-2.col-md-5.col-md-offset-2
+                .col.xs-12
+                  a(href='#') View Project
+                .col.xs-12
+                  a(href='#') Edit Project
 
     li.dropdown.yamm-fw
       a.dropdown-toggle(data-toggle='dropdown' href='#') Page 2

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { ProjectViewerComponent } from './project-viewer.component';
+import {ProjectService} from '../project.service';
 
 describe('ProjectViewerComponent', () => {
   let component: ProjectViewerComponent;
@@ -8,7 +9,9 @@ describe('ProjectViewerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectViewerComponent ]
+      imports: [FormsModule],
+      declarations: [ ProjectViewerComponent ],
+      providers: [ProjectService]
     })
     .compileComponents();
   }));
