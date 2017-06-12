@@ -17,9 +17,9 @@ import { ProjectModule } from './project/project.module';
     HttpModule,
     AppRoutingModule,
     NavigationModule,
-    ProjectModule
+    ProjectModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

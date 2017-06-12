@@ -3,26 +3,19 @@ nav.navbar.yamm.navbar-default
     a(href="#").navbar-brand ProfiSle
 
   ul.nav.navbar-nav
-    li.active
-      a(href="#") Home
+    li
+      a(routerLink="/") Home
+
+    li
+      a(routerLink='/viewer/1')
+        | View Project
+    li
+      a(routerLink='/editor/1')
+        | Edit Project
 
     li.dropdown.yamm-fw
       a.dropdown-toggle(data-toggle='dropdown' href='#')
-        | Projec
-        span.caret
-
-      ul.dropdown-menu
-        li
-          .yamm-content
-            .row
-              .col-lg-3.col-lg-offset-2.col-md-5.col-md-offset-2
-                .col.xs-12
-                  a(href='#') View Project
-                .col.xs-12
-                  a(href='#') Edit Project
-
-    li.dropdown.yamm-fw
-      a.dropdown-toggle(data-toggle='dropdown' href='#') Page 2
+        | BigMenu Example
         span.caret
 
       ul.dropdown-menu

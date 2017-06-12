@@ -6,6 +6,7 @@ import {ProjectEditorComponent} from './project/project-editor/project-editor.co
 import {ProjectViewerComponent} from './project/project-viewer/project-viewer.component';
 import {ProjectService} from './project/project.service';
 import {FormsModule} from '@angular/forms';
+import {ProjectOverviewComponent} from './project/project-overview/project-overview.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,7 +19,8 @@ describe('AppComponent', () => {
         AppComponent,
         MainNavigationComponent,
         ProjectEditorComponent,
-        ProjectViewerComponent
+        ProjectViewerComponent,
+        ProjectOverviewComponent
       ],
       providers: [ProjectService]
     }).compileComponents();
@@ -30,16 +32,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
+  it('should render title in a navigation brand tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('.navbar-brand').textContent).toContain('ProfiSle');
   }));
 });

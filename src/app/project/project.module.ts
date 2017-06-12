@@ -4,19 +4,24 @@ import { CommonModule } from '@angular/common';
 import { ProjectEditorComponent } from './project-editor/project-editor.component';
 import { ProjectViewerComponent } from './project-viewer/project-viewer.component';
 import { ProjectService } from './project.service';
+import { ProjectOverviewComponent } from './project-overview/project-overview.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     ProjectEditorComponent,
-    ProjectViewerComponent
+    ProjectViewerComponent,
+    ProjectOverviewComponent
   ],
   exports: [
     ProjectEditorComponent,
-    ProjectViewerComponent
+    ProjectViewerComponent,
+    ProjectOverviewComponent
   ],
   providers: [
     ProjectService
