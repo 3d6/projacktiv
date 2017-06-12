@@ -1,0 +1,12 @@
+.row
+  .col-xs-12
+    nav
+      ul.pagination
+        li(*ngFor='let project of projectList')
+          a(routerLink="editor/{{project.id}}", routerLinkActive='active') {{project.title}}
+
+
+
+
+
+
