@@ -7,6 +7,7 @@ import {ProjectViewerComponent} from './project/project-viewer/project-viewer.co
 import {ProjectService} from './project/project.service';
 import {FormsModule} from '@angular/forms';
 import {ProjectOverviewComponent} from './project/project-overview/project-overview.component';
+import {BreadcrumbComponent} from './navigation/breadcrumb/breadcrumb.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -20,7 +21,8 @@ describe('AppComponent', () => {
         MainNavigationComponent,
         ProjectEditorComponent,
         ProjectViewerComponent,
-        ProjectOverviewComponent
+        ProjectOverviewComponent,
+        BreadcrumbComponent
       ],
       providers: [ProjectService]
     }).compileComponents();

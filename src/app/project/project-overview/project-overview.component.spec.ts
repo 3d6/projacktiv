@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ProjectOverviewComponent } from './project-overview.component';
+import { ProjectService } from '../project.service';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('ProjectOverviewComponent', () => {
   let component: ProjectOverviewComponent;
@@ -8,7 +9,15 @@ describe('ProjectOverviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectOverviewComponent ]
+      imports:
+        [
+          RouterTestingModule
+        ],
+      declarations:
+        [
+          ProjectOverviewComponent
+        ],
+      providers: [ ProjectService ]
     })
     .compileComponents();
   }));

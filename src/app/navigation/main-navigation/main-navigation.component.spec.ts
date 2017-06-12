@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MainNavigationComponent } from './main-navigation.component';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('MainNavigationComponent', () => {
   let component: MainNavigationComponent;
@@ -8,7 +8,14 @@ describe('MainNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainNavigationComponent ]
+      imports:
+        [
+          RouterTestingModule
+        ],
+      declarations:
+        [
+          MainNavigationComponent
+        ]
     })
     .compileComponents();
   }));

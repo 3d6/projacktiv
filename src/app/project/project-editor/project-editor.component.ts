@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/switchMap';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProjectService } from '../project.service';
 import { Project } from '../project';
-import {log} from 'util';
+import { log } from 'util';
 
 @Component({
   selector: 'app-project-editor',
