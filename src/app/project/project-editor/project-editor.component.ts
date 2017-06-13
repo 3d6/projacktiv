@@ -36,21 +36,21 @@ export class ProjectEditorComponent implements OnInit {
       .subscribe(project => this.currentProject = project);
   }
 
-  public saveProject() {
-    log('saving project');
+  public saveProject(): void {
+    console.log('saving project');
     this.projectService.saveProject(this.currentProject).then(
       p => {
         const isNew = !(this.currentProject.id > 0);
         this.currentProject = p;
         if (! isNew) {
-          this.router.navigate(['/editor'.concat('' + p.id)]);
+          this.router.navigate(['/editor/' + p.id]);
         }
       }
     );
   }
 
-  public newProject() {
-    log('creating new project');
+  public newProject(): void {
+    console.log('creating new project');
     this.projectService.createProject().then(
       p => {
         log('created new project: ' + p.id);
