@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# angular-pug-workaround
+*.html
+
 # compiled output
 /dist
 /tmp
