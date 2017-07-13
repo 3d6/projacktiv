@@ -32,6 +32,7 @@
     "esri-loader": "^1.0.0",
     "intl": "^1.2.5",
     "jquery": "^3.2.1",
+    "ngx-bootstrap": "^1.7.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

@@ -9,15 +9,25 @@ import { EsriFactoryService } from '../esri-factory.service';
 })
 export class MapComponent implements OnInit {
 
-  @ViewChild('mapViewNode') mapEl: ElementRef;
+  public togleDrawModel: String;
+
+  @ViewChild('mapViewNode')
+  private esriMap: ElementRef;
+
+  @ViewChild('searchViewNode')
+  private esriSearch: ElementRef;
 
   // for JSAPI 4.x you can use the "any for TS types
-  public mapView: __esri.MapView;
+  private map: __esri.Map;
+  private search: __esri.Search;
+  private drawingToolBar: any;
 
-  constructor(private esriFactoryService: EsriFactoryService) { }
+  constructor(private mapProvider: EsriFactoryService) { }
 
   ngOnInit() {
-
+    this.map = this.mapProvider.createMap(this.esriMap.nativeElement);
+    this.search = this.mapProvider.createSearchUtil(this.esriSearch.nativeElement, this.map);
+    this.drawingToolBar = this.mapProvider.createDrawToolBar(this.map);
   }
 
 }

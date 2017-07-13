@@ -1,2 +1,11 @@
-.map-component
+.row
+  .col-xs-12
+    .overlap.pull-right
+      .row
+        .col-xs-12
+          div(#searchViewNode="")
+      .row.pull-right
+        .col-xs-12
+          button.btn.btn-primary( type="button" [(ngModel)]="togleDrawModel", btnCheckbox, btnCheckboxTrue="1", btnCheckboxFalse="0" ) Draw Polygon {{togleDrawModel}}
+    div(#mapViewNode="")
 
