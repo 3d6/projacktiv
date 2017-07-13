@@ -1,18 +1,8 @@
 nav.navbar.yamm.navbar-default
   .navbar-header
-    a(href="#").navbar-brand ProfiSle
+    a(routerLink='/').navbar-brand {{productDescription}}
 
   ul.nav.navbar-nav
-    li
-      a(routerLink="/") Home
-
-    li
-      a(routerLink='/viewer/1')
-        | View Project
-    li
-      a(routerLink='/editor/1')
-        | Edit Project
-
     li.dropdown.yamm-fw
       a.dropdown-toggle(data-toggle='dropdown' href='#')
         | BigMenu Example
@@ -24,25 +14,16 @@ nav.navbar.yamm.navbar-default
             .row
 
               .col-lg-3.col-md-4.col-sm-6.col-xs-12
-                h4 Important Group 1
-                  .glyphicon.glyphicon-search(aria-hidden="true")
-                hr
-                .row
-                  each val in [1, 2, 3, 4]
-                    .col-xs-12= 'Group Item 1.' + val
-
-              .col-lg-3.col-md-4.col-sm-6.col-xs-12
-                h4 Important Group 2
-                  .glyphicon.glyphicon-star(aria-hidden="true")
-                hr
-                .row
-                  each val in [1, 2, 3]
-                    .col-xs-12= 'Group Item 2.' + val
-
-              .col-lg-3.col-md-4.col-sm-6.col-xs-12
-                h4 Important Group 3
+                h4 Project
                   .glyphicon.glyphicon-heart(aria-hidden="true")
                 hr
                 .row
-                  each val in [1, 2, 3, 4]
-                    .col-xs-12= 'Group Item 3.' + val
+                  a.col-xs-12(routerLink='projectoverview') Show Project Overview
+
+              .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                h4 Geolocation
+                  .glyphicon.glyphicon-star(aria-hidden="true")
+                hr
+                .row
+                  a.col-xs-12(routerLink='mapview') Show Map
+

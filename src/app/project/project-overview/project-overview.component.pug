@@ -5,8 +5,8 @@
         li(*ngFor='let project of projectList')
           a(routerLink="editor/{{project.id}}", routerLinkActive='active') {{project.title}}
 
-
-
-
+.row
+  .col-xs-12
+    router-outlet
 
 

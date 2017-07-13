@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project-overview',

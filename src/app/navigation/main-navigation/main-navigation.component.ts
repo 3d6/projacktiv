@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainNavigationComponent implements OnInit {
 
+  public productDescription = 'ProfiSle';
+
   constructor() { }
 
   ngOnInit() {

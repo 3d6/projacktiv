@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationModule } from './navigation/navigation.module';
 import { ProjectModule } from './project/project.module';
+import { GeolocationModule } from './geolocation/geolocation.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,6 +19,7 @@ import { ProjectModule } from './project/project.module';
     AppRoutingModule,
     NavigationModule,
     ProjectModule,
+    GeolocationModule,
   ],
   providers: [ ],
   bootstrap: [ AppComponent ]

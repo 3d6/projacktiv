@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { RouterModule } from '@angular/router';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   imports: [
@@ -11,11 +12,13 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
   ],
   declarations: [
     MainNavigationComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    WelcomeComponent
   ],
   exports: [
     MainNavigationComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    WelcomeComponent
   ]
 })
 export class NavigationModule { }

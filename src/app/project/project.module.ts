@@ -5,7 +5,7 @@ import { ProjectEditorComponent } from './project-editor/project-editor.componen
 import { ProjectViewerComponent } from './project-viewer/project-viewer.component';
 import { ProjectService } from './project.service';
 import { ProjectOverviewComponent } from './project-overview/project-overview.component';
-import { RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
