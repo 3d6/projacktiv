@@ -6,6 +6,6 @@
           div(#searchViewNode="")
       .row.pull-right
         .col-xs-12
-          button.btn.btn-primary( type="button" [(ngModel)]="togleDrawModel", btnCheckbox, btnCheckboxTrue="1", btnCheckboxFalse="0" ) Draw Polygon {{togleDrawModel}}
+          button.btn.btn-primary( '(click)'="toggleDrawTool()", type="button", [(ngModel)]="togleDrawModel", btnCheckbox, btnCheckboxTrue="true", btnCheckboxFalse="false", [(disabled)]="togleDrawModelDisabled" ) Draw Polygon disabled:{{togleDrawModelDisabled}}
     div(#mapViewNode="")
 

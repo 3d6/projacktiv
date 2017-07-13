@@ -20,11 +20,16 @@ const routes: Routes = [{
       ]
     },
     { path: 'mapview', component: MapComponent, data: { breadcrumb: 'Map'}},
-  ]}
+  ]},
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [ EsriFactoryService ]
 })
 export class AppRoutingModule { }

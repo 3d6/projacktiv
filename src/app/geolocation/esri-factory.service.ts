@@ -19,7 +19,7 @@ export class EsriFactoryService implements Resolve<any> {
     return !!this.provider;
   }
 
-  public createMap(elementId: ElementRef, initialPosition: any = [9.886122, 51.814242], initialZoom: number = 16): __esri.Map {
+  public createMap(elementId: ElementRef, initialPosition: any = [9.886122, 51.814242], initialZoom: number = 16): any {
     return new this.provider.Map(elementId, {
       basemap: 'satellite',
       center: initialPosition,
@@ -29,14 +29,45 @@ export class EsriFactoryService implements Resolve<any> {
     });
   }
 
-  public createSearchUtil(elementId: ElementRef, map: __esri.Map): __esri.Search {
+  public createSearchUtil(elementId: ElementRef, map: any): any {
     return new this.provider.Search({map}, elementId );
   }
 
-  public createDrawToolBar(map: __esri.Map): any {
+  public createDrawToolBar(map: any): any {
     return new this.provider.Draw(map);
   }
 
+  public createEditToolBar(map: any): any {
+    return new this.provider.Edit(map);
+  }
+
+  public get Polygon(): String{
+    return 'polygon';
+  }
+
+  public createPolygon(data: any): any {
+    return new this.provider.Polygon(data);
+  }
+
+  public get Registry(): any {
+    return this.provider.Registry;
+  }
+
+  public get Edit(): any {
+    return this.provider.Edit;
+  }
+
+  public get SimpleFillSymbol(): any {
+    return new this.provider.SimpleFillSymbol();
+  }
+
+  public get event(): any {
+    return this.provider.event;
+  }
+
+  public createGraphic(geometry: any, symbol: any): any {
+    return new this.provider.Graphic(geometry, symbol);
+  }
   /**
    * Loading on page load but after the guard, so it has to be resolved manually in app-routing.moule.ts
    * @returns {Promise<TResult2|TResult1>}
@@ -68,22 +99,25 @@ export class EsriFactoryService implements Resolve<any> {
       'esri/symbols/SimpleLineSymbol',
       'esri/symbols/SimpleFillSymbol',
 
-      'dojo/parser',
       'dijit/registry',
+      'dojo/parser',
+      'esri/Color',
+      'dojo/on',
+      'dojo/_base/event',
 
       'esri/dijit/Search',
     ]).then(([
       Map, Graphic, Draw, Edit,
       Point, Polyline, Polygon,
       SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
-      Parser, Registry,
+      Registry, Parser, Color, on, event,
       Search,
     ]) => {
       this.provider = {
         Map, Graphic, Draw, Edit,
         Point, Polyline, Polygon,
         SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
-        Parser, Registry,
+        Registry, Parser, Color, on, event,
         Search, };
       console.log('Loaded Esri Modules');
     });
